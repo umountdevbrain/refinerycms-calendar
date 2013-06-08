@@ -43,8 +43,8 @@ hu:
       events:
         show:
           details: 'Esemény Adatai'
-          from: 'Kezdete:'
-          to: 'Vége:'
+          starts_at: 'Kezdete:'
+          ends_at: 'Vége:'
           register: 'Regisztráció az eseményre'
           view_on_map: 'Megtekintés térképen'
           other: További Események
@@ -57,8 +57,8 @@ hu:
         phone: Telefon
       refinery/calendar/events:
         title: 'Elnevezés'
-        from: Kezdete
-        to: 'Vége'
+        starts_at: Kezdete
+        ends_at: 'Vége'
         registration_link: Regisztrációs link
         excerpt: 'Ízelítő'
         description: 'Leírás'

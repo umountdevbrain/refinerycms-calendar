@@ -9,12 +9,9 @@ module Refinery
 
       validates :title, :presence => true, :uniqueness => true
 
-      attr_accessible :title, :from, :to, :registration_link,
+      attr_accessible :title, :starts_at, :ends_at, :registration_link,
                       :venue_id, :excerpt, :description,
                       :featured, :position
-
-      alias_attribute :from, :starts_at
-      alias_attribute :to, :ends_at
 
       delegate :name, :address,
                 :to => :venue,

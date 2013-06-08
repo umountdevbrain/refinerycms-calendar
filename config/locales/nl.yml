@@ -52,8 +52,8 @@ nl:
         phone: Phone
       refinery/calendar/event:
         title: Title
-        from: From
-        to: To
+        starts_at: From
+        ends_at: To
         registration_link: Registration Link
         excerpt: Excerpt
         description: Description
