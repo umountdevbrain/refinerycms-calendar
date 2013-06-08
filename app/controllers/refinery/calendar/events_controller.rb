@@ -22,6 +22,17 @@ module Refinery
         render :template => 'refinery/calendar/events/index'
       end
 
+      def events_in_json
+        params[:month] ||= Date.today.strftime("%m")
+        params[:year] ||= Date.today.strftime("%Y")
+        period_date = Date.new(params[:year], params[:month])
+
+        @events = Event.where(:starts_at => period_date.beginning_of_month.beginning_of_day..period_date.end_of_month.end_of_day).order('refinery_calendar_events.starts_at ASC')
+        respond_to do |format|
+          format.json { render :json => @events.to_json }
+        end
+      end
+
       protected
       def find_page
         @page = ::Refinery::Page.where(:link_url => "/calendar/events").first
