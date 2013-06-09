@@ -3,7 +3,7 @@ Refinery::Core::Engine.routes.append do
   # Frontend routes
   namespace :calendar do
     get 'events/archive' => 'events#archive'
-    get 'events/json' => 'events#events_in_json', :format => :json
+    get 'events/month-events' => 'events#month_events', :format => :json
     resources :events, :only => [:index, :show]
   end
 
