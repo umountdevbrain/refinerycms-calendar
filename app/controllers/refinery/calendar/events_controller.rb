@@ -22,7 +22,7 @@ module Refinery
         render :template => 'refinery/calendar/events/index'
       end
 
-      def events_in_json
+      def month_events
         params[:month] ||= Date.today.strftime("%m")
         params[:year] ||= Date.today.strftime("%Y")
         month = params[:month].to_i
